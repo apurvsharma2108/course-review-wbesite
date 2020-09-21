@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="container">
+  <br>
+  <div class="card" id="backdrop">
+    <div class="card-body">
+      <div class="row">
+        {% for course in courses %}
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="text-center">
+              <img src="{{course.image}}" alt="" class="img-fluid" width=75%>
+              <h3 class="text-center">{{course.name}}</h3>
+                <i class="text-center">{{course.realse_Date}}</i>
+                <a href="{% url 'main:detail' course.id %}">Read More!</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

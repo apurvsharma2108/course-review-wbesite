@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="container">
+  <br>
+  <div class="card">
+    <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{course.image}}" alt="{{course.name}}" class="img-fluid">
+        <br>
+
+
+      </div>
+      <div class="col-md-8">
+        <h3 class="text-center">
+          {{course.name}}
+        </h3>
+        <p>Description:{{course.description}}</p>
+        <br>
+        <h5>Site:{{course.site}}</h5>
+        <h5>Level:{{course.type}}</h5>
+        <h5>Rating:{{course.rating}}/10</h5>
+        <h5>Price:{{course.price}} ₹</h5>
+        <a href="{% url 'main:edit_courses' course.id %}" class="btn btn-warning">Edit Course</a>
+        <a href="{% url 'main:delete_courses' course.id %}" class="btn btn-danger">Delete Course</a>
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}
