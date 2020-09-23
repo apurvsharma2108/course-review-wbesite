@@ -9,5 +9,7 @@ urlpatterns = [
     path('details/<int:id>/',views.detail,name="detail"),
     path('addcourses/',views.add_courses,name="add_courses"),
     path('editcourses/<int:id>/',views.edit_courses,name="edit_courses"),
-    path('deletecourses/<int:id>/',views.delete_courses,name="delete_courses")
+    path('deletecourses/<int:id>/',views.delete_courses,name="delete_courses"),
+    path('addreview/<int:id>/',views.add_review,name="add_review"),
+    path('editreview/<int:course_id>/<int:review_id>/',views.edit_review,name="edit_review")
 ]
