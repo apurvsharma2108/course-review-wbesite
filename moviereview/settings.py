@@ -25,7 +25,7 @@ SECRET_KEY = 'p=1s3agek72#n=mplxn6=jbyvw+hl9nl%2-k&5(4mkl$@$snb('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sharmaapurv.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -122,4 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+
 CRISPY_TEMPLATE_PACK='bootstrap4'

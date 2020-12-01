@@ -1,32 +1,18 @@
 body{
-  background-color: #151313;
+  background-color:white;
+  background-image: url('{% static "img/15.jpg"%}');
 }
  #backdrop{
-  background-color: #eef3ef;
+  background-color:white;
+    /* background-image: url('{{ STATIC_URL }}static/img/15.jpg'); */
 }
-/* .mycontent{
-  padding-top: 100px;
- border: 10px solid red;
+h1{
+  font-family: cursive;
 }
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  background: #191063;
-  margin: 0;
+.text-center{
+font-family: cursive;
+font-size: 18px;
 }
-
-
-#note {
-  position: absolute;
-  color: rgba(249,241,204,1);
-  left: 0;
-  right: 0;
-  bottom: 20px;
-  margin: auto;
-  text-align: center;
-  user-select: none;
-  font-family: Arial;
-} */
+.text-heading{
+  font-family: serif;
+}

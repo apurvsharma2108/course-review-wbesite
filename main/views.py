@@ -16,6 +16,17 @@ def home(request):
     }
 
     return render(request,'main/index.html',context)
+def compare_courses(request):
+    query=request.GET.get("title")
+    allCourses=None
+    if query:
+        allCourses=Course.objects.filter(name__icontains=query)
+    else:
+        allCourses=Course.objects.all()
+    context={
+        'courses':allCourses,
+    }
+    return render(request,'main/newindex.html',context)
 # details page
 def detail(request,id):
     reviews=Review.objects.filter(course=id).order_by("-comment")
